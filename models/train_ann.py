@@ -26,3 +26,5 @@ model.compile(optimizer='adam', loss= 'binary_crossentropy', metrics=['accuracy'
 model.fit(X_train, y_train, epochs = 30, batch_size=13, validation_split = 0.2, verbose = 1)
 
 model.save('models/churn_model.h5')
+pd.to_pickle(scaler,'.model/scaler.pk')
+
